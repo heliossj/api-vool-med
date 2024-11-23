@@ -34,5 +34,9 @@ public class PacienteController {
         paciente.atualizaInformacoes(dados);
     }
 
-
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void delete(@PathVariable Long id){
+        repository.deleteById(id);
+    }
 }
