@@ -60,6 +60,14 @@ public class Medico {
         return this.id;
     }
 
+    public String getTelefone() {
+        return this.telefone;
+    }
+
+    public Endereco getEndereco(){
+        return this.endereco;
+    }
+
     public void atualizaInformacoes(@Valid DadosAtualizaMedico dados) {
         if (dados.nome() !=null)
             this.nome = dados.nome();
